@@ -94,23 +94,23 @@ module.exports.getCalendarEvents = async (event) => {
           resolve(response);
         }
       }
-    )
-      .then((results) => {
-        return {
-          statusCode: 200,
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Credentials': true,
-          },
-          body: JSON.stringify({ events: results.data.items }),
-        };
-      })
-      .catch((error) => {
-        // Handle error
-        return {
-          statusCode: 500,
-          body: JSON.stringify(error),
-        };
-      });
-  });
+    );
+  })
+    .then((results) => {
+      return {
+        statusCode: 200,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': true,
+        },
+        body: JSON.stringify({ events: results.data.items }),
+      };
+    })
+    .catch((error) => {
+      // Handle error
+      return {
+        statusCode: 500,
+        body: JSON.stringify(error),
+      };
+    });
 };
