@@ -2,7 +2,8 @@
 
 .App {
   text-align: center;
-  padding: 2% 5%;
+  padding: 2% 10%;
+  background-color: #1b0c1a;
 }
 
 .App * {
@@ -14,8 +15,31 @@ ul {
   list-style: none;
 }
 
+body {
+  font-size: 18px;
+}
+
 p {
   margin: 5px 0;
+}
+
+h1 {
+  font-size: 46px;
+  color: #fff;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+a {
+  color: #b1728c;
+}
+
+a:visited {
+  color: #6d3c52;
+}
+
+a:hover {
+  color: #f4e2de;
 }
 
 input[type="text"],
@@ -24,7 +48,7 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   border: 1px solid #ccc;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
   align-self: center;
   height: 38px;
@@ -49,7 +73,7 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
 
@@ -66,16 +90,23 @@ input[type="number"] {
 }
 
 .suggestions>li:hover {
-  background-color: #bcdcdb;
+  background-color: #2d222f;
+  color: #fff;
 }
 
 .event {
   padding: 10px 10px 35px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   text-align: left;
-  border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
+  background-color: #2d222f;
+  color: #fff;
+  box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
+}
+
+.event-description {
+  margin: 15px 0;
 }
 
 .details-btn {
@@ -83,7 +114,10 @@ input[type="number"] {
   right: 5px;
   bottom: 5px;
   padding: 5px 8px;
-  border-radius: 4px;
+  margin-top: 10px;
   outline: none;
   cursor: pointer;
+  background-color: #1b0c1a;
+  color: #fff;
+  font-size: 18px;
 }

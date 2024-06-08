@@ -14,7 +14,7 @@ const Event = ({ event }) => {
           <p><a href={event.htmlLink}>See details on Google Calendar</a></p>
           <p className="event-description">{event.description}</p>
         </div>) : null}
-      <button className='showDetailsButton' onClick={() => setShowDetails(!showDetails)}>
+      <button className='details-btn' onClick={() => setShowDetails(!showDetails)}>
         {showDetails ? 'Hide Details' : 'Show Details'}
       </button>
     </li>
