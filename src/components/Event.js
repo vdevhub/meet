@@ -9,7 +9,7 @@ const Event = ({ event }) => {
       <p>{event.created}</p>
       <p>{event.location}</p>
       {showDetails ? (
-        <div>
+        <div className="details">
           <h3>About event:</h3>
           <p><a href={event.htmlLink}>See details on Google Calendar</a></p>
           <p className="event-description">{event.description}</p>
