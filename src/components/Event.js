@@ -1,13 +1,20 @@
 import { useState } from "react";
+import { format } from 'date-fns';
 
 const Event = ({ event }) => {
   const [showDetails, setShowDetails] = useState(false);
 
+  function formatDate(string) {
+    return format(new Date(string), 'MMMM do yyyy, hh:mm:ss');
+  }
+
   return (
     <li className="event" key={event.id} >
-      <h2>{event.summary}</h2>
-      <p>{event.created}</p>
-      <p>{event.location}</p>
+      <div className="event-basic">
+        <h2>{event.summary}</h2>
+        <p>{formatDate(event.created)}</p>
+        <p>{event.location}</p>
+      </div>
       {showDetails ? (
         <div className="details">
           <h3>About event:</h3>

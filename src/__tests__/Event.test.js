@@ -2,6 +2,7 @@ import { render } from '@testing-library/react';
 import Event from '../components/Event';
 import userEvent from "@testing-library/user-event";
 import { getEvents } from '../api';
+import { format } from 'date-fns';
 
 describe('<Event /> component', () => {
   let EventComponent;
@@ -17,7 +18,7 @@ describe('<Event /> component', () => {
   });
 
   test('renders event start time', () => {
-    expect(EventComponent.queryByText(allEvents[0].created)).toBeInTheDocument();
+    expect(EventComponent.queryByText(format(new Date(allEvents[0].created), 'MMMM do yyyy, hh:mm:ss'))).toBeInTheDocument();
   });
 
   test('renders event location', () => {

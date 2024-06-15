@@ -1,9 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
+body {
+  background-color: #6d3c52;
+}
+
 .App {
   text-align: center;
   padding: 2% 10%;
-  background-color: #6d3c52;
 }
 
 .App * {
@@ -105,8 +108,13 @@ input[type="number"] {
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
 
+.event-basic {
+  margin-bottom: 30px;
+}
+
 .event-description {
   margin: 15px 0;
+  margin-bottom: 30px;
 }
 
 .details-btn {
@@ -114,7 +122,10 @@ input[type="number"] {
   right: 5px;
   bottom: 5px;
   padding: 5px 8px;
-  margin-top: 10px;
+  border: 1px solid #593143;
+  border-bottom: 2px solid #381e29;
+  border-right: 2px solid #381e29;
+  border-radius: 5px;
   outline: none;
   cursor: pointer;
   background-color: #1b0c1a;
