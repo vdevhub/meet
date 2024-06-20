@@ -20,7 +20,7 @@ const App = () => {
     if (navigator.onLine) {
       setWarningAlert("");
     } else {
-      setWarningAlert("You're offline. Events loaded from the cache based on the last online view.");
+      setWarningAlert("You're offline. Events were loaded from the cache.");
     }
     fetchData();
   }, [currentCity, currentNOE]);
