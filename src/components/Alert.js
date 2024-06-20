@@ -52,7 +52,7 @@ class WarningAlert extends Alert {
   constructor(props) {
     super(props);
     this.color = 'rgb(255, 215, 0)'; // gold
-    this.bgColor = 'rgb(255, 250, 205)'; // lemon chiffon
+    this.bgColor = 'rgb(255, 255, 240)'; // ivory
   }
 }
 
