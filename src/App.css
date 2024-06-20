@@ -115,7 +115,7 @@ input[type="number"] {
 .event {
   display: inline-block;
   /* Ensure list items are inline-block */
-  padding: 10px 10px 35px;
+  padding: 10px 17px 35px;
   margin: 10px 0;
   text-align: left;
   border-radius: 4px;
