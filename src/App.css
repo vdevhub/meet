@@ -1,12 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
-body {
-  background-color: #6d3c52;
-}
-
 .App {
   text-align: center;
-  padding: 2% 10%;
+  padding: 2% 5%;
+  position: relative;
+  min-height: 100vh;
+  background: url('./background.svg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .App * {
@@ -16,10 +16,17 @@ body {
 ul {
   padding: 0;
   list-style: none;
+  margin: 0 auto;
+  /* Center the ul */
+  text-align: center;
+  /* Center the list items */
+  width: 100%;
+  max-width: 800px;
 }
 
 body {
   font-size: 18px;
+  text-align: center;
 }
 
 p {
@@ -106,12 +113,16 @@ input[type="number"] {
 }
 
 .event {
+  display: inline-block;
+  /* Ensure list items are inline-block */
   padding: 10px 10px 35px;
   margin: 10px 0;
   text-align: left;
   border-radius: 4px;
+  width: 100%;
+  max-width: 800px;
   position: relative;
-  background-color: #2d222f;
+  background-color: #031859;
   color: #fff;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -127,16 +138,14 @@ input[type="number"] {
 
 .details-btn {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 10px;
+  bottom: 10px;
   padding: 5px 8px;
-  border: 1px solid #593143;
-  border-bottom: 2px solid #381e29;
-  border-right: 2px solid #381e29;
+  border: 1px solid #020B40;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
-  background-color: #1b0c1a;
+  background-color: #020B40;
   color: #fff;
   font-size: 18px;
 }

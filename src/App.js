@@ -6,6 +6,7 @@ import Header from './components/Header';
 import { useEffect, useState } from 'react';
 import { extractLocations, getEvents } from './api';
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
+import { ReactComponent as BackgroundSVG } from "./background.svg";
 
 const App = () => {
   const [events, setEvents] = useState([]);
