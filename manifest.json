@@ -22,7 +22,7 @@
     },
     {
       "src": "meet-app-512.png",
-      "sizes": "521x512",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
