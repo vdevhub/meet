@@ -1,12 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
-.App {
-  text-align: center;
-  padding: 2% 5%;
+body {
   position: relative;
   min-height: 100vh;
   background: url('./background.svg') no-repeat center center fixed;
   background-size: cover;
+}
+
+.App {
+  text-align: center;
+  padding: 2% 5%;
 }
 
 .App * {
