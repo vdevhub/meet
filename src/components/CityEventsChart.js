@@ -13,7 +13,7 @@ const CityEventsChart = ({ allLocations, events }) => {
       const count = events.filter((event) => event.location === location).length
       const city = location.split((/, | - /))[0]
       return { city, count }; //shorthand of {city: city, count: count}
-    })
+    });
     return data;
   };
 
