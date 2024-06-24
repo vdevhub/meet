@@ -20,20 +20,20 @@ const EventGenresChart = ({ events }) => {
     return data;
   };
 
-  const renderCustomizedLabel = ({ cx, cy, midAngle, outerRadius, percent, index }) => {
+  const renderCustomizedLabel = ({ cx, cy, midAngle, outerRadius, innerRadius, percent, index }) => {
     const RADIAN = Math.PI / 180;
-    const radius = outerRadius;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN) * 1.07;
-    const y = cy + radius * Math.sin(-midAngle * RADIAN) * 1.07;
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.7;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
     return percent ? (
       <text
         x={x}
         y={y}
-        fill="#8884d8"
+        fill="#fff"
         textAnchor={x > cx ? 'start' : 'end'}
         dominantBaseline="central"
       >
-        {`${genres[index]} ${(percent * 100).toFixed(0)}%`}
+        {`${(percent * 100).toFixed(0)}%`}
       </text>
     ) : null;
   };
@@ -45,9 +45,7 @@ const EventGenresChart = ({ events }) => {
       <PieChart
         margin={{
           top: 40,
-          right: 20,
-          bottom: 80,
-          left: 20,
+          bottom: 80
         }}>
         <Pie
           data={data}
@@ -61,7 +59,7 @@ const EventGenresChart = ({ events }) => {
             <Cell key={`cell-${index}`} fill={colors[index]} />
           ))}
         </Pie>
-        <Legend align="right" verticalAlign="middle" layout="vertical" height={10} />
+        <Legend align="center" verticalAlign="bottom" layout="horizontal" height={2} />
       </PieChart>
     </ResponsiveContainer>
   );

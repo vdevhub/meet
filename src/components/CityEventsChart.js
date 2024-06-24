@@ -23,9 +23,7 @@ const CityEventsChart = ({ allLocations, events }) => {
       <ScatterChart
         margin={{
           top: 40,
-          right: 20,
-          bottom: 80,
-          left: 20,
+          bottom: 80
         }}
       >
         <CartesianGrid fill="#264bba" fillOpacity={0.5} />
