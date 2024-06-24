@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/meet/static/css/main.c8ed02a4.css",
-    "main.js": "/meet/static/js/main.c01dc2b2.js",
+    "main.css": "/meet/static/css/main.9bfb7bb2.css",
+    "main.js": "/meet/static/js/main.492c77bb.js",
     "static/js/453.5dc7ca0f.chunk.js": "/meet/static/js/453.5dc7ca0f.chunk.js",
     "service-worker.js": "/meet/service-worker.js",
     "static/media/background.svg": "/meet/static/media/background.d796c4539c312f9d8f00bbb0a8ac78c7.svg",
     "index.html": "/meet/index.html",
-    "main.c8ed02a4.css.map": "/meet/static/css/main.c8ed02a4.css.map",
-    "main.c01dc2b2.js.map": "/meet/static/js/main.c01dc2b2.js.map",
+    "main.9bfb7bb2.css.map": "/meet/static/css/main.9bfb7bb2.css.map",
+    "main.492c77bb.js.map": "/meet/static/js/main.492c77bb.js.map",
     "453.5dc7ca0f.chunk.js.map": "/meet/static/js/453.5dc7ca0f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8ed02a4.css",
-    "static/js/main.c01dc2b2.js"
+    "static/css/main.9bfb7bb2.css",
+    "static/js/main.492c77bb.js"
   ]
 }
