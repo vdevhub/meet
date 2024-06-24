@@ -22,10 +22,10 @@ const CityEventsChart = ({ allLocations, events }) => {
     <ResponsiveContainer width="99%" height={400} >
       <ScatterChart
         margin={{
-          top: 20,
+          top: 40,
           right: 20,
           bottom: 80,
-          left: 0,
+          left: 20,
         }}
       >
         <CartesianGrid fill="#264bba" fillOpacity={0.5} />

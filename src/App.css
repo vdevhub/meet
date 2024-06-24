@@ -149,3 +149,16 @@ input[type="number"] {
   color: #fff;
   font-size: 18px;
 }
+
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+}
