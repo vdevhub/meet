@@ -24,7 +24,7 @@ const CityEventsChart = ({ allLocations, events }) => {
         margin={{
           top: 40,
           bottom: 80,
-          right: 20
+          right: 30
         }}
       >
         <CartesianGrid fill="#264bba" fillOpacity={0.5} />
