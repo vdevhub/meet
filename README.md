@@ -100,3 +100,8 @@ Show a chart with the number of upcoming events in each city.
 In this Meet App, serverless functions (aka FaaS) are used to handle the authorization process for accessing calendar events through Google calendar API. An AWS Lambda hosted serverless function makes sure an authorization token is correctly obtained given that the accessing user logs in to their Google account and provides consent to grant access. As a result, the application renders events in the UI. All users of the application have to be authorized to display events and work with the app in general. 
 
 As building a dedicated API (full backend) for this single process wouldn't be efficient, the serverless approach has been evaluated as the most suitable, cost effective, and the fastest. 
+
+## Cloning Repository
+```
+git clone https://github.com/vdevhub/meet.git
+```
