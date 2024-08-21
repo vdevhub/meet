@@ -1,6 +1,8 @@
 # Meet App
 ## Live App
-The app is deployed right [here](https://vdevhub.github.io/meet/).
+The app is deployed [on GitHub.io](https://vdevhub.github.io/meet/).
+
+![MeetMain](https://github.com/user-attachments/assets/aaab55a7-7479-4b68-8d0d-9e7bb13aed3f)
 
 ## Description
 Meet is an application showing upcoming events in a selected city. It is a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events.
