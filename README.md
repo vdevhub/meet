@@ -1,16 +1,16 @@
 # Meet App
-## Live App
-The app is deployed [on GitHub.io](https://vdevhub.github.io/meet/).
+
+- Meet is an application showing upcoming events in a selected city.
+- It is a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique.
+- The application uses the Google Calendar API to fetch upcoming events.
+- Google OAuth2 is implemented for authentication.
 
 ![MeetMain](https://github.com/user-attachments/assets/aaab55a7-7479-4b68-8d0d-9e7bb13aed3f)
-
-## Description
-Meet is an application showing upcoming events in a selected city. It is a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events.
 
 ## Key Features
 1. Filter events by city.
 2. Show/Hide event details.
-3. Specify number of events.
+3. Specify the number of events.
 4. Use the app when offline.
 5. Add an app shortcut to the home screen.
 6. Display charts visualizing event details.
@@ -18,14 +18,21 @@ Meet is an application showing upcoming events in a selected city. It is a serve
 ## User Stories
 1. As a user, I should be able to filter events by city so that I can see a list of events taking place in that city.
 2. As a user, I should be able to show/hide event details so that I can read more about an event or close the detail when finished reading and increase or reduce the information on the screen as needed.
-3. As a user, I should be able to specify number of events so that I can get a shorter/longer list of events displayed for convenient searching.
+3. As a user, I should be able to specify the number of events so that I can get a shorter/longer list of events displayed for convenient searching.
 4. As a user, I should be able to use the app when offline so that I can browse events regardless of my current connection.
-5. As a user, I should be able to add an app shortcut to the home screen so that I have an easy and quick access to the app.
+5. As a user, I should be able to add an app shortcut to the home screen so that I have easy and quick access to the app.
 6. As a user, I should be able to display charts visualizing event details so that I can see how many events are taking place in a city and their popularity easily to help me make a decision.
+
+## Using Serverless Functions
+- In this app, serverless functions (aka FaaS) are used to handle the authorization process for accessing calendar events through Google Calendar API.
+- An AWS Lambda-hosted serverless function makes sure an authorization token is correctly obtained given that the accessing user logs in to their Google account and provides consent to grant access.
+- As a result, the application renders events in the UI.
+- All users of the application have to be authorized to display events and work with the app in general.
+- As building a dedicated API (full backend) for this single process wouldn't be efficient, the serverless approach has been evaluated as the most suitable, cost-effective, and fastest. 
 
 ## Scenarios
 ### Scenario 1.1
-When user hasn’t searched for a city, show upcoming events from all cities.
+When a user hasn’t searched for a city, show upcoming events from all cities.
 - Given a user hasn’t searched for a city;
 - When the user opens the app;
 - Then the user should see a list of upcoming events.
@@ -57,7 +64,7 @@ User can expand an event to see details.
 ### Scenario 2.3
 User can collapse an event to hide details.
 - Given an event has been expanded and event details displayed;
-- When a user clicks on the "Hide details" button;
+- When a user clicks on "Hide details" button;
 - Then the event details will be collapsed.
 
 ### Scenario 3.1
@@ -79,15 +86,15 @@ Show cached data when there’s no internet connection.
 - Then show cached data to the user.
 
 ### Scenario 4.2
-Show error when user changes search settings (city, number of events).
+Show error when a user changes search settings (city, number of events).
 - Given there's no internet connection and the main page is open;
 - When a user attempts to change search settings (city, number of events);
 - Then show an error.
 
 ### Scenario 5.1
-User can install the meet app as a shortcut on their device home screen.
+User can install the Meet app as a shortcut on their device home screen.
 - Given a user opened the app;
-- When the user selects to "Add to Home Screen";
+- When the user selects "Add to Home Screen";
 - Then a new app shortcut will be added to the device's home screen.
 
 ### Scenario 6.1
@@ -95,13 +102,3 @@ Show a chart with the number of upcoming events in each city.
 - Given the main page is open and events are loaded;
 - When a user navigates to the charts section;
 - Then a chart with the number of upcoming events in each city will be displayed.
-
-## Using Serverless Functions
-In this Meet App, serverless functions (aka FaaS) are used to handle the authorization process for accessing calendar events through Google calendar API. An AWS Lambda hosted serverless function makes sure an authorization token is correctly obtained given that the accessing user logs in to their Google account and provides consent to grant access. As a result, the application renders events in the UI. All users of the application have to be authorized to display events and work with the app in general. 
-
-As building a dedicated API (full backend) for this single process wouldn't be efficient, the serverless approach has been evaluated as the most suitable, cost effective, and the fastest. 
-
-## Cloning Repository
-```
-git clone https://github.com/vdevhub/meet.git
-```
